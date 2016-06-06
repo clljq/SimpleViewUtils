@@ -9,18 +9,18 @@
 ###初始化View
     public class MainActivity extends AppCompatActivity {
 
-    @ViewInject(R.id.tv)
-    private TextView textView;
-
-    @ViewInject(R.id.btn)
-    private Button button;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        //开始注入
-        ViewUtils.inject(this);
+	    @ViewInject(R.id.tv)
+	    private TextView textView;
+	
+	    @ViewInject(R.id.btn)
+	    private Button button;
+	
+	    @Override
+	    protected void onCreate(Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
+	        setContentView(R.layout.activity_main);
+	        //开始注入
+	        ViewUtils.inject(this);
     }
 ###绑定事件
     @ClickInject({R.id.btn1,R.id.btn2,R.id.btn3})
